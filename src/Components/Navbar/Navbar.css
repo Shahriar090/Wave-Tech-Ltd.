@@ -1,0 +1,7 @@
+.nav-options ul li:hover{
+background-color: #ecf0f1;
+padding: 3px;
+border-radius: 5%;
+font: bold;
+text-decoration: underline;
+}

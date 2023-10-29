@@ -1,7 +1,8 @@
-.nav-options ul li:hover{
-background-color: #ecf0f1;
-padding: 3px;
-border-radius: 5%;
-font: bold;
-text-decoration: underline;
+.container-mega-dropdown{
+    list-style-type: none;
+}
+.container-mega-dropdown li:hover{
+    background-color: aliceblue;
+    text-decoration: underline;
+    
 }

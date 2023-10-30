@@ -5,15 +5,15 @@ import {   IoMdArrowDropdown } from 'react-icons/io';
 import { FaCarAlt, FaCartArrowDown, FaFacebook, FaHeart, FaInstagram, FaPhoneAlt, FaSearch, FaTwitter, FaUserAlt } from 'react-icons/fa';
 const Navbar = () => {
     return (
-        <nav>
-            <div className='flex justify-between px-8 mt-2 border-b-2'>
+        <nav className='w-full h-auto max-w-full'>
+            <div className='flex justify-between items-center px-8 py-2 border-b-2 bg-[#1abc9c] text-white'>
                 {/* language and currency */}
             <div className='container flex justify-between w-1/3 '>
                <div className='flex gap-4'>
                <div className='language'>
                <div className="dropdown dropdown-hover">
                 <label tabIndex={0} className="m-1">Lan<IoMdArrowDropdown className='inline-block'></IoMdArrowDropdown></label>
-                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-24">
+                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-[#1abc9c] rounded-box w-24">
                     <li><a>English UK</a></li>
                     <li><a>Bengali</a></li>
                 </ul>
@@ -22,7 +22,7 @@ const Navbar = () => {
                 <div className="usd">
                                 <div className="dropdown dropdown-hover">
                 <label tabIndex={0} className=" m-1">USD<IoMdArrowDropdown className='inline-block'></IoMdArrowDropdown></label>
-                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-24">
+                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-[#1abc9c] rounded-box w-24">
                     <li><a>$USD</a></li>
                     <li><a>Taka</a></li>
                 </ul>
@@ -61,11 +61,11 @@ const Navbar = () => {
 
             {/* search bar , logo , cart and hotline number */}
 
-           <div className="container flex justify-between items-center px-16 pt-4 border-b-2 pb-4">
+           <div className="container flex justify-between items-center px-16 pt-4 border-b-2 pb-4  max-w-full">
             <div className="search relative">
-            <input type="text" placeholder="Search Products" className="input input-bordered w-full max-w-xs px-8" />
+            <input type="text" placeholder="Search Products" className="input input-bordered border-[#1abc9c] w-full max-w-xs px-8 text-black" />
 
-            <FaSearch className='absolute top-4 left-2'></FaSearch>
+            <FaSearch className='absolute top-4 left-2  text-[#58cfb7]'></FaSearch>
            
             </div>
 
@@ -92,7 +92,7 @@ const Navbar = () => {
 
            {/* mega dropdown for all products and details */}
 
-           <div className="container-mega-dropdown flex justify-center items-center gap-10 mt-3">
+           <div className="container-mega-dropdown flex justify-center items-center gap-10 py-2 ">
             <li>
                 <Link>Home</Link>
             </li>

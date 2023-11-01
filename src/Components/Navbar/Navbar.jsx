@@ -2,13 +2,15 @@ import React from 'react';
 import './Navbar.css'
 import { Link } from 'react-router-dom';
 import {   IoMdArrowDropdown } from 'react-icons/io';
-import { FaCarAlt, FaCartArrowDown, FaFacebook, FaHeart, FaInstagram, FaPhoneAlt, FaSearch, FaTwitter, FaUserAlt } from 'react-icons/fa';
+import {  FaCartArrowDown, FaFacebook, FaHeart, FaInstagram, FaPhoneAlt, FaSearch, FaTwitter, FaUserAlt } from 'react-icons/fa';
+import NavSm from './NavSmDevice/NavSm';
 const Navbar = () => {
     return (
-        <nav className='w-full h-auto max-w-full'>
+       <>
+        <nav className='w-full h-auto max-w-full hidden md:block lg:block xl:block 2xl:block'>
             <div className='flex justify-between items-center px-8 py-2 border-b-2 bg-[#1abc9c] text-white'>
                 {/* language and currency */}
-            <div className='container flex justify-between w-1/3 '>
+            <div className='container flex justify-between w-1/3 md:gap-5'>
                <div className='flex gap-4'>
                <div className='language'>
                <div className="dropdown dropdown-hover">
@@ -61,7 +63,7 @@ const Navbar = () => {
 
             {/* search bar , logo , cart and hotline number */}
 
-           <div className="container flex justify-between items-center px-16 pt-4 border-b-2 pb-4  max-w-full">
+           <div className="container flex justify-between items-center gap-6 px-16 pt-4 border-b-2 pb-4  max-w-full">
             <div className="search relative">
             <input type="text" placeholder="Search Products" className="input input-bordered border-[#1abc9c] w-full max-w-xs px-8 text-black" />
 
@@ -119,6 +121,15 @@ const Navbar = () => {
             </li>
            </div>
         </nav>
+
+        {/* navbar for small device */}
+
+        <nav>
+           <div className='block md:hidden lg:hidden xl:hidden 2xl:hidden'>
+            <NavSm></NavSm>
+           </div>
+        </nav>
+       </>
     );
 };
 
